@@ -1,0 +1,60 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Connection Flash to MySQL</title>
+<style>
+    table {
+
+    }
+    th {
+        background-color: #04AA6D;
+        color: white;
+        border-bottom: 1px solid #ddd;
+        padding: 15px;
+   }
+   td {
+       text-align: center;
+       border-bottom: 1px solid #ddd;
+       padding: 15px;
+   }
+   tr:hover {background-color: coral;}
+</style>
+</head>
+<body>
+<h1>Users List</h1>
+
+   {% if result %}
+      <table id="", style="width:100">
+          <tbody>
+          <tr>
+              <th>ID</th>
+              <th>EmployeeID</th>
+              <th>FirstName</th>
+              <th>LastName</th>
+              <th>Gender</th>
+              <th>Email</th>
+              <th>Role</th>
+              <th>Password</th>
+          </tr>
+   {% for row in result %}
+          <tr>
+              <td>{{ row.id }}</td>
+              <td>{{ row.EmployeeID }}</td>
+              <td>{{ row.FirstName }}</td>
+              <td>{{ row.LastName }}</td>
+              <td>{{ row.Gender }}</td>
+              <td>{{ row.Email }}</td>
+              <td>{{ row.Role }}</td>
+              <td>{{ row.Password }}</td>
+          </tr>
+   {% endfor %}
+          </tbody>
+      </table>
+   {% endif %}
+
+</body>
+</html>
